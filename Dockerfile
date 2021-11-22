@@ -1,4 +1,4 @@
-FROM debian:11
+FROM debian:bullseye-20211011-slim
 MAINTAINER ROBERTA SOLIMAN
 USER root
 
