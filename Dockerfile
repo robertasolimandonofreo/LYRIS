@@ -23,7 +23,8 @@ RUN apt-get update && apt-get install -y \
     host \
     gpg \
     linux-image-5.10.0-8-amd64 \
-    glibc-source
+    glibc-source \
+    libc6-dev
 
 RUN rm -rf /etc/ssh/sshd_config
 ADD sshd_config /etc/ssh/
