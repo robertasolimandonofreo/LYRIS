@@ -3,21 +3,36 @@
 Foi necessário instalar as seguintes ferramentas:
 
 > apt-listbugs: Ferramenta que lista bugs críticos antes de cada instalação apt.
-libpam-tmpdir: Diretórios temporários por usuários automáticos.
-apt-listchanges: Ferramenta de notificação do histórico de mudanças em pacotes.
-needrestart: Verifica quais daemons precisam ser reiniciados após as atualizações da biblioteca.
-debsecan: Analisador de segurança do debian.
-debsums:  Ferramenta para verificação de arquivos instalados por pacotes contra somas de verificação md5.
-fail2ban: Proíbe o acesso de máquinas que causam diversos erros no momento da autenticação.
-net-tools: Conjunto de ferramentas para rede net-3
-busybox-syslogd: Oferece syslogd usando busybox.
-rkhunter: Rootkit, backdoor, sniffer e escaneador de vulnerabilidades.
-procps: Utilitários para o sistema de arquivos /proc.
-efibootmgr: Interage com o gerenciador de inicialização.
-ssh: Servidor e cliente "secure shell".
-acct: Utilitários de contabilidade gnu para contabilidade de processo e login.
-linux-image-5.10.0-8-amd64 (kernel): Linux 5.10 para pcs de 64 bits (assinado).
-libc6-dev: Biblioteca c gnu (arquivos de desenvolvimento).
+
+>libpam-tmpdir: Diretórios temporários por usuários automáticos.
+
+> apt-listchanges: Ferramenta de notificação do histórico de mudanças em pacotes.
+
+>needrestart: Verifica quais daemons precisam ser reiniciados após as atualizações da biblioteca.
+
+>debsecan: Analisador de segurança do debian.
+
+>debsums:  Ferramenta para verificação de arquivos instalados por pacotes contra somas de verificação md5.
+
+> fail2ban: Proíbe o acesso de máquinas que causam diversos erros no momento da autenticação.
+
+> net-tools: Conjunto de ferramentas para rede net-3
+
+>busybox-syslogd: Oferece syslogd usando busybox.
+
+>rkhunter: Rootkit, backdoor, sniffer e escaneador de vulnerabilidades.
+
+>procps: Utilitários para o sistema de arquivos /proc.
+
+>efibootmgr: Interage com o gerenciador de inicialização.
+
+> ssh: Servidor e cliente "secure shell".
+
+>acct: Utilitários de contabilidade gnu para contabilidade de processo e login.
+
+>linux-image-5.10.0-8-amd64 (kernel): Linux 5.10 para pcs de 64 bits (assinado).
+
+>libc6-dev: Biblioteca c gnu (arquivos de desenvolvimento).
 
 ## Personalização de perfis de digitalização do Lynis:
 Para agrupar testes, permitindo que você habilite ou desabilite os testes, defina o escopo dos testes e mais, o Lynis tem perfis de verificação armazenados no diretório / etc/lynis. Os perfis de verificação têm várias configurações, fornecendo uma maneira prática de gerenciar testes semelhantes em massa, em vez de se preocupar em gerenciá-los um de cada vez. Fiz a criação do arquivo profile.prf e fiz as seguintes mudanças:
