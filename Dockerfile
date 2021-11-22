@@ -32,7 +32,6 @@ RUN rm -rf /etc/lynis/default.prf
 ADD sshd_config /etc/ssh/
 ADD profile.prf /etc/lynis
 ADD profile etc/
-ADD 80-lynis.conf /etc/sysctl.d/
 
 RUN cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 RUN /etc/init.d/ssh restart
