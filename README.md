@@ -1,5 +1,6 @@
 Lynis Debian com Dockerfile
 Foi necessário instalar as seguintes ferramentas:
+
 •	apt-listbugs: Ferramenta que lista bugs críticos antes de cada instalação apt.
 •	libpam-tmpdir: Diretórios temporários por usuários automáticos.
 •	apt-listchanges: Ferramenta de notificação do histórico de mudanças em pacotes.
@@ -16,6 +17,7 @@ Foi necessário instalar as seguintes ferramentas:
 •	acct: Utilitários de contabilidade gnu para contabilidade de processo e login.
 •	linux-image-5.10.0-8-amd64 (kernel): Linux 5.10 para pcs de 64 bits (assinado).
 •	libc6-dev: Biblioteca c gnu (arquivos de desenvolvimento).
+
 Personalização de perfis de digitalização do Lynis:
 Para agrupar testes, permitindo que você habilite ou desabilite os testes, defina o escopo dos testes e mais, o Lynis tem perfis de verificação armazenados no diretório / etc/lynis. Os perfis de verificação têm várias configurações, fornecendo uma maneira prática de gerenciar testes semelhantes em massa, em vez de se preocupar em gerenciá-los um de cada vez. Fiz a criação do arquivo profile.prf e fiz as seguintes mudanças:
 •	skip-test=KRNL-5830
