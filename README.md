@@ -62,3 +62,6 @@ $ gpg --list-keys --fingerprint
 
 ## Ativar o tmp.mount.
 Quando habilitado, esse armazenamento temporário aparece como um sistema de arquivos montado, mas armazena seu conteúdo na memória volátil em vez de em um dispositivo de armazenamento persistente. ... E ao usar isso, nenhum arquivo em /tmp é armazenado no disco rígido, exceto quando a memória está baixa, caso em que o espaço de troca é usado.
+
+## Compiladores rígidos, como restrição de acesso apenas ao usuário root.
+Mudei a permissão das pastas usr/bin/gcc e /usr/bin/as.
