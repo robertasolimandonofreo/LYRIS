@@ -76,5 +76,3 @@ RUN wget -O - https://packages.cisofy.com/keys/cisofy-software-public.key | apt-
     echo "deb https://packages.cisofy.com/community/lynis/deb/ stable main" | tee /etc/apt/sources.list.d/cisofy-lynis.list
 
 RUN echo "deb http://deb.debian.org/debian buster-backports main" |  tee -a /etc/apt/sources.list 
-
-RUN lynis audit system --profile /etc/lynis/profile.prf
