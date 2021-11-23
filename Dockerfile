@@ -23,7 +23,17 @@ RUN apt-get update && apt-get install -y \
     host \
     gpg \
     linux-image-5.10.0-8-amd64 \
-    libc6-dev
+    libc6-dev \
+    gcc \
+    puppet \
+    aide \
+    apparmor \
+    apparmor-profiles \
+    apparmor-utils \
+    auditd 
+
+RUN chmod o-rx /usr/bin/gcc
+RUN chmod o-rx /usr/bin/as
 
 RUN rm -rf /etc/ssh/sshd_config
 RUN rm -rf /etc/profile 
@@ -40,7 +50,25 @@ RUN wget https://cisofy.com/files/cisofy-software.pub
 RUN gpg --import cisofy-software.pub 
 RUN gpg --list-keys --fingerprint 
 RUN host -t txt cisofy-software-key.cisofy.com
-RUN chmod 0755 /var/run/sshd
+RUN mkdir /root/.ssh
+RUN chmod 644 /var/run/sshd \
+    /etc/crontab  \                                      
+    /etc/group \                                    
+    /etc/group- \                                      
+    /etc/hosts.allow \                                    
+    /etc/hosts.deny \                                    
+    /etc/issue \                                          
+    /etc/issue.net \                                      
+    /etc/motd \                                          
+    /etc/passwd \                                        
+    /etc/passwd- \                                       
+    /etc/ssh/sshd_config \                              
+    /root/.ssh \                            
+    /etc/cron.d \                             
+    /etc/cron.daily \                           
+    /etc/cron.hourly \                       
+    /etc/cron.weekly \                          
+    /etc/cron.monthly
 
 RUN cp -v /usr/share/systemd/tmp.mount /etc/systemd/system/ 
 RUN systemctl enable tmp.mount

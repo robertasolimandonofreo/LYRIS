@@ -102,6 +102,7 @@ skip-test=SSH-7408:tcpkeepalive
 skip-test=KRNL-5830
 skip-test=LOGG-2138
 skip-test=BOOT-5104:001
+
 # Skip Lynis upgrade availability test (default: no)
 #skip-upgrade-test=yes
 

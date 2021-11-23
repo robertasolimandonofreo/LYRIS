@@ -1,7 +1,7 @@
 FROM debian:bullseye-20211011-slim
 MAINTAINER ROBERTA SOLIMAN
 USER root
-
+lynis audit system --tests FILE-7524 --profile /etc/lynis/profile.prf
 RUN apt-get update && apt-get install -y \ 
     lynis \
     libpam-tmpdir \
